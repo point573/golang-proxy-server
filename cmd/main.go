@@ -23,7 +23,7 @@ func main() {
 	// Start a simple HTTP server for health checks
 	go setupHealthCheckServer()
 
-	listener, err := net.Listen("tcp", "localhost:"+serverPort)
+	listener, err := net.Listen("tcp", ":" + serverPort)
 	if err != nil {
 		fmt.Println("Error creating listener:", err)
 		return
